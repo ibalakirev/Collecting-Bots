@@ -35,7 +35,10 @@ public class Unit : MonoBehaviour
 
     private void TakeResource()
     {
-        DetermineAbsenceResource(_carriedResource);
+        if (_carriedResource == null)
+        {
+            return;
+        }
 
         _carriedResource.transform.SetParent(transform);
         _carriedResource.transform.localPosition = Vector3.forward * _carryDistance;
@@ -46,7 +49,10 @@ public class Unit : MonoBehaviour
 
     private void DropResource()
     {
-        DetermineAbsenceResource(_carriedResource);
+        if (_carriedResource == null)
+        {
+            return;
+        }
 
         _carriedResource.transform.SetParent(null);
         _baseBot.TakeResource(_carriedResource);
@@ -66,13 +72,5 @@ public class Unit : MonoBehaviour
         }
 
         onComplete();
-    }
-
-    private void DetermineAbsenceResource(Resource resource)
-    {
-        if (resource == null)
-        {
-            return;
-        }
     }
 }

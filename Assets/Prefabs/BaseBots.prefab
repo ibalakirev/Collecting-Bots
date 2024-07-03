@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7953683952204193292}
   - component: {fileID: 5156304561694957339}
   - component: {fileID: 2179904095969723779}
-  - component: {fileID: 8670268818645689561}
   m_Layer: 0
   m_Name: BaseBots
   m_TagString: Untagged
@@ -60,7 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c477c176f84eb1846a94a4886f6b0497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectsPool: {fileID: 8670268818645689561}
+  _botPrefab: {fileID: 7546036037785331530, guid: da2436f400fe02140a6d85ddc09702bf,
+    type: 3}
 --- !u!114 &2179904095969723779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,20 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d928bde548903845b8db104432b43cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8670268818645689561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940569943792995542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3635b31ab73232f4f87b8846ecf46c66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabObject: {fileID: 7546036037785331530, guid: da2436f400fe02140a6d85ddc09702bf,
-    type: 3}
 --- !u!1 &5092277891961887606
 GameObject:
   m_ObjectHideFlags: 0

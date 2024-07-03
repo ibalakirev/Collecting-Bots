@@ -422,7 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b0af171b3385448a4a65cf2ef46293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectsPool: {fileID: 423706370}
+  _prefabObject: {fileID: 2045283867036475483, guid: b6a01fe2ac3441d44a173fb55cba855d,
+    type: 3}
 --- !u!4 &423706372
 Transform:
   m_ObjectHideFlags: 0
@@ -438,7 +439,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &702123484
+--- !u!1 &1100858703
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -446,9 +447,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 702123487}
-  - component: {fileID: 702123486}
-  - component: {fileID: 702123485}
+  - component: {fileID: 1100858705}
+  - component: {fileID: 1100858704}
   m_Layer: 0
   m_Name: SpawnerBases
   m_TagString: Untagged
@@ -456,89 +456,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &702123485
+--- !u!114 &1100858704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702123484}
+  m_GameObject: {fileID: 1100858703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba939b452ff7ab49b3604d65048b7b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a253b5ebe33f7748a5ca8f2456ba457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabObject: {fileID: 2179904095969723779, guid: 08c7eaa3e69dea244b06d896be881b22,
+  _baseBots: {fileID: 2179904095969723779, guid: 08c7eaa3e69dea244b06d896be881b22,
     type: 3}
---- !u!114 &702123486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702123484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d5b5ec7e8a0a6846ac6d0ccfc774eb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectsPool: {fileID: 702123485}
---- !u!4 &702123487
+  _resourceData: {fileID: 1944727860}
+--- !u!4 &1100858705
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702123484}
+  m_GameObject: {fileID: 1100858703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &972031188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 972031190}
-  - component: {fileID: 972031189}
-  m_Layer: 0
-  m_Name: DisablerResources
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &972031189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972031188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d66542d279931a34fa8c82e10285a620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnerResources: {fileID: 423706371}
-  _resourcesPool: {fileID: 423706370}
---- !u!4 &972031190
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972031188}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.48795864, y: 0.24245365, z: 0.5244505}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -768,9 +710,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
-  - {fileID: 702123487}
-  - {fileID: 972031190}
   - {fileID: 1512298445}
   - {fileID: 1944727861}
   - {fileID: 423706372}
   - {fileID: 1823596596}
+  - {fileID: 1100858705}

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class SpawnerBots : Spawner<BotsPool>
+public class SpawnerBots : MonoBehaviour
 {
-    public Unit Create(Vector3 taregtPosition, Quaternion rotation)
-    {
-        Unit unit = ObjectsPool.GetObject(taregtPosition, rotation);
+    [SerializeField] private Unit _botPrefab;
 
-        return unit;
+    public Unit Create(Vector3 randomPosition)
+    {
+        return Instantiate(_botPrefab, randomPosition, transform.rotation);
     }
 }

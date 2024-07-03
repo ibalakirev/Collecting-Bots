@@ -23,11 +23,15 @@ public class BaseBots : MonoBehaviour
     {
         _scannerResuorces = GetComponent<ScannerResuorces>();
         _spawnerBots = GetComponent<SpawnerBots>();
-        _resourceData = FindAnyObjectByType<ResourceData>();
 
         CreateBots(_startCountBots);
 
         StartCoroutine(CollectResourcesRoutine());
+    }
+
+    public void Initialize(ResourceData resourceData)
+    {
+        _resourceData = resourceData;
     }
 
     public void TakeResource(Resource resource)
@@ -58,7 +62,7 @@ public class BaseBots : MonoBehaviour
         int minValue = 0;
 
         List<Resource> availableResources = _scannerResuorces.GetAllResources()
-       .Where(resource => !_resourceData.IsResourceBusy(resource))
+       .Where(resource => _resourceData.IsResourceBusy(resource) == false)
        .ToList();
 
         if (availableResources.Count > minValue)
@@ -87,10 +91,9 @@ public class BaseBots : MonoBehaviour
             float randomAxisZ = Random.Range(-_spawnRadius, _spawnRadius);
             float axisY = 0;
 
-
             Vector3 randomPosition = transform.position + new Vector3(randomAxisX, axisY, randomAxisZ);
 
-            Unit bot = _spawnerBots.Create(randomPosition, transform.rotation);
+            Unit bot = _spawnerBots.Create(randomPosition);
 
             bot.SetBaseBot(this);
 

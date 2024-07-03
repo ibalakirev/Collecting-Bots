@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class StoredResources : MonoBehaviour
+public class IndicatorAvailableResources : MonoBehaviour
 {
     [SerializeField] private TMP_Text _freeCountResourse;
     [SerializeField] private BaseBots _baseBot;

@@ -7,26 +7,21 @@ public class ResourceData : MonoBehaviour
 
     public bool IsResourceBusy(Resource resource)
     {
-        _resourceStates.TryGetValue(resource, out bool isBusy);
-
-        _resourceStates[resource] = isBusy;
+        if(_resourceStates.TryGetValue(resource, out bool isBusy) == false)
+        {
+            _resourceStates[resource] = false;
+        }
 
         return isBusy;
     }
 
     public void OccupyResource(Resource resource)
     {
-        if (_resourceStates.ContainsKey(resource))
-        {
-            _resourceStates[resource] = true;
-        }
+        _resourceStates[resource] = true;
     }
 
     public void ReleaseResource(Resource resource)
     {
-        if (_resourceStates.ContainsKey(resource))
-        {
-            _resourceStates[resource] = false;
-        }
+        _resourceStates[resource] = false;
     }
 }
