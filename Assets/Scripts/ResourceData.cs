@@ -5,7 +5,7 @@ public class ResourceData : MonoBehaviour
 {
     private Dictionary<Resource, bool> _resourceStates = new Dictionary<Resource, bool>();
 
-    public bool IsResourceBusy(Resource resource)
+    public bool IsBotBusy(Resource resource)
     {
         if(_resourceStates.TryGetValue(resource, out bool isBusy) == false)
         {

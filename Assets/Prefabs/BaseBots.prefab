@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3304808334012855650}
   - component: {fileID: 7953683952204193292}
-  - component: {fileID: 5156304561694957339}
-  - component: {fileID: 2179904095969723779}
+  - component: {fileID: 6402551006061503188}
+  - component: {fileID: 2259423471641988531}
   m_Layer: 0
   m_Name: BaseBots
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 940569943792995542}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 0}
-  m_LocalScale: {x: 1.5, y: 3, z: 1.5}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 183329364872068176}
@@ -47,21 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4865ff3f631407147922490a8eddb6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5156304561694957339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940569943792995542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c477c176f84eb1846a94a4886f6b0497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _botPrefab: {fileID: 7546036037785331530, guid: da2436f400fe02140a6d85ddc09702bf,
-    type: 3}
---- !u!114 &2179904095969723779
+--- !u!114 &6402551006061503188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,6 +59,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d928bde548903845b8db104432b43cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2259423471641988531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940569943792995542}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5092277891961887606
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +225,6 @@ GameObject:
   - component: {fileID: 183329364872068176}
   - component: {fileID: 7337355215311037484}
   - component: {fileID: 2819967176979057660}
-  - component: {fileID: 2242480918653745992}
   m_Layer: 0
   m_Name: BaseModel
   m_TagString: Untagged
@@ -236,7 +242,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 3, z: 2.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7733203599366519956}
@@ -292,27 +298,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2242480918653745992
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6478227900357905786}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8240354471370050953
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 86.207, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.6106667, y: 0.7}
+  m_AnchoredPosition: {x: -0.6106667, y: -0.8}
   m_SizeDelta: {x: 1920.7053, y: 1079.6035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2486978657726015541
@@ -389,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _freeCountResourse: {fileID: 4279537332005183333}
-  _baseBot: {fileID: 2179904095969723779}
+  _baseBot: {fileID: 6402551006061503188}
 --- !u!114 &4959998051388571680
 MonoBehaviour:
   m_ObjectHideFlags: 0

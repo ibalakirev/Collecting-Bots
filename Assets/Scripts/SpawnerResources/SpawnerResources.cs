@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpawnerResources : ResourcesPool
+public class SpawnerResources : Spawner<ResourcesPool>
 {
-    private float _minPositionAxis = -20.0f;
-    private float _maxPositionAxis = 20.0f;
+    private float _minPositionAxis = -25.0f;
+    private float _maxPositionAxis = 25.0f;
     private float _positionAxisY = 0.5f;
 
     private void Start()
@@ -14,7 +14,7 @@ public class SpawnerResources : ResourcesPool
 
     private IEnumerator GenerateResource()
     {
-        float delay = 1f;
+        float delay = 0.09f;
 
         var wait = new WaitForSeconds(delay);
 
@@ -31,7 +31,7 @@ public class SpawnerResources : ResourcesPool
         Vector3 spawnPoint = new Vector3(Random.Range(_minPositionAxis, _maxPositionAxis),
             _positionAxisY, Random.Range(_minPositionAxis, _maxPositionAxis));
 
-        Resource resource = GetObject(spawnPoint, transform.rotation);
+        Resource resource = ObjectsPool.GetObject(spawnPoint, transform.rotation);
 
         resource.Released += ReleaseResource;
     }
@@ -40,6 +40,6 @@ public class SpawnerResources : ResourcesPool
     {
         resource.Released -= ReleaseResource;
 
-        ReturnObject(resource);
+        ObjectsPool.ReturnObject(resource);
     }
 }
